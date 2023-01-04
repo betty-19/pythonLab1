@@ -1,4 +1,4 @@
-'''first program
+#first program
 def sum():
     print("Hello")
 print("Hello world")
@@ -21,8 +21,8 @@ print(name)
 age = 8
 cgpa = 6.77896785
 print("my name is {:s} and i am {:d} years old. my cgpa is {:f}".format(name,age,cgpa) )
-'''
-'''name3 = "Abebe"
+#new
+name3 = "Abebe"
 array="hello, world"
 print(array.split(','))
 print(name3[-3:-1])
@@ -30,25 +30,19 @@ print(name3[::-1])
 print(bin(60))
 print(str(bin(name3)))
 #age=input("")
-'''
-'''
 num = input("Enter a number to check if it is even or odd")
 if int(num) % 2 == 0:
     print("It is even")
 else:
     print("It is odd")
-    '''
-
-'''
+#new
 if int(num) % 3== 0 and int(num)% 5 != 0:
     print("Hello")
 elif int(num)%5 == 0 and int(num)% 3 != 0:
     print("world")
 elif int(num) %3 ==0 and int(num) % 5== 0:
     print("Hello World")
- '''
-
-"""
+#new
 num = input("Enter a number to check if it is even or odd ")
 match int(num):
     case 1:
@@ -59,23 +53,3 @@ match int(num):
         print("It is three")
     case _:
         print("invalid input")
-"""
-num = input("Enter a number ")
-for x in range(1 ,int(num) + 1):
-    if int(x) % 3== 0 and int(x)% 5 != 0:
-        print("Hello " + str(x))
-    elif int(x)%5 == 0 and int(x)% 3 != 0:
-        print("world " + str(x))
-    elif int(x) %3 ==0 and int(x) % 5== 0:
-        print("Hello World "+ str(x))
-n= input("Enter a number to make square ")
-for x in range(int(n)):
-    for y in range(int(n)):
-        print("* ", end="")
-    print()
-L =input("Enter length ")
-w =input("Enter width ")
-for x in range(int(L)):
-    for y in range(int(w)):
-        print("* ", end="")
-    print()
