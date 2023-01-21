@@ -6,6 +6,33 @@ def remove_punctuation(s):
 
     # use the translator
     return s.translate(translator)
+def compute_word_frequency(text):
+    # split the text into words
+    words = text.split()
+
+    # create a dictionary to store the word frequencies
+    word_freq = {}
+
+    # count the frequency of each word
+    for word in words:
+        word = word.lower()
+        if word in word_freq:
+            word_freq[word] += 1
+        else:
+            word_freq[word] = 1
+
+    # sort the words by frequency in decreasing order
+    sorted_words = sorted(word_freq.items(), key=lambda x: x[1], reverse=True)
+
+    # print the word frequencies
+    count =0
+    for word, freq in sorted_words:
+        print(f'{word}=> {freq}, ' ,end=" ")
+        count = count + 1
+        if count == 5:
+            print()
+            count=0
+    print()
 
 def main():
     # open the text file for reading
