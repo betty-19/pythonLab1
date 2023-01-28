@@ -3,28 +3,6 @@ import re
 
 def remove_punctuation(s):
     return re.sub(r'[^\w\s]', '', s)
-    # arr =["!", '(' , ')' , '-' , '[' , ']', '{', '}' , ';' , "::" ]#'"\,<>./?@#$%^&*_~፤።፣+፨=]
-    # for i in s:
-    #     if i in arr:
-    #         s = s.replace(i, " ")
-
-    # return s
-
-    #my_new_string = s.translate( { ord(""): None for i in '''!()-[]{};:'"\,<>./?@#$%^&*_~፤።፣+፨='''} )
-    #return  my_new_string
-    # s1 = re.sub("[^A-Za-z0-9]"," ",s)
-    # return s1
-    # create a translator object to remove punctuation
-    # translator = str.maketrans('', '', string.punctuation)
-
-    # use the translator
-    # return s.translate(translator)
-    #     punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~፤።፣+፨='''
-    #     for char_element in s:
-#         if char_element in punctuations:
-#             string = s.replace(char_element, "")
-#     return string
-
 def compute_char_frequency(text):
     
     # create a dictionary to store the character frequencies
