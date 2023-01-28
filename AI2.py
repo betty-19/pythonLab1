@@ -20,6 +20,12 @@ def compute_char_frequency(text):
                 continue
             else:
                 char_freq[char] = 1
+    # sort the characters by frequency in decreasing order
+    sorted_chars = sorted(char_freq.items(), key=lambda x: x[1], reverse=True)
+
+    # print the first five most frequently occurring characters
+    for char, freq in sorted_chars[:5]:
+        print(f'{char}: {freq}')
 def compute_word_frequency(text):
     # split the text into words
     words = text.split()
