@@ -1,15 +1,34 @@
 import string
+import re
 
 def remove_punctuation(s):
+    return re.sub(r'[^\w\s]', '', s)
+    # arr =["!", '(' , ')' , '-' , '[' , ']', '{', '}' , ';' , "::" ]#'"\,<>./?@#$%^&*_~፤።፣+፨=]
+    # for i in s:
+    #     if i in arr:
+    #         s = s.replace(i, " ")
+
+    # return s
+
+    #my_new_string = s.translate( { ord(""): None for i in '''!()-[]{};:'"\,<>./?@#$%^&*_~፤።፣+፨='''} )
+    #return  my_new_string
+    # s1 = re.sub("[^A-Za-z0-9]"," ",s)
+    # return s1
     # create a translator object to remove punctuation
-    translator = str.maketrans('', '', string.punctuation)
+    # translator = str.maketrans('', '', string.punctuation)
 
     # use the translator
-    return s.translate(translator)
+    # return s.translate(translator)
+    #     punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~፤።፣+፨='''
+    #     for char_element in s:
+#         if char_element in punctuations:
+#             string = s.replace(char_element, "")
+#     return string
+
 def compute_char_frequency(text):
+    
     # create a dictionary to store the character frequencies
     char_freq = {}
-
     # count the frequency of each character
     for char in text:
         char = char.lower()
@@ -64,14 +83,15 @@ def main():
         text = remove_punctuation(text)
 
         # compute and print the word frequency
-        print("****Enter your choice****")
-        print("1.To know word frequency")
-        print("2.To know the character frequency")
-        print("3.To know the Total line")
-        print("4.To know the Total words")
-        print("5.To know the Total  number of character")
-        print("6.Exit")
+       
     while(True):
+           print("****Enter your choice****")
+           print("1.To know word frequency")
+           print("2.To know the character frequency")
+           print("3.To know the Total line")
+           print("4.To know the Total words")
+           print("5.To know the Total  number of character")
+           print("6.Exit")
            user_input = input("Enter you choice: ")
            match int(user_input):
                case 1:
