@@ -6,6 +6,20 @@ def remove_punctuation(s):
 
     # use the translator
     return s.translate(translator)
+def compute_char_frequency(text):
+    # create a dictionary to store the character frequencies
+    char_freq = {}
+
+    # count the frequency of each character
+    for char in text:
+        char = char.lower()
+        if char in char_freq:
+            char_freq[char] += 1
+        else:
+            if char == " ":
+                continue
+            else:
+                char_freq[char] = 1
 def compute_word_frequency(text):
     # split the text into words
     words = text.split()
